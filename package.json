@@ -1,0 +1,16 @@
+{
+  "name": "my-restx",
+  "version": "0.0.1",
+  "description": "Tempory fork for flask-restx",
+  "repository": "remicastaing/my-restx",
+  "keywords": [
+    "swagger",
+    "flask"
+  ],
+  "author": "Rémi Castaingt",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "swagger-ui-dist": "^3.48.0",
+    "typeface-droid-sans": "0.0.40"
+  }
+}
