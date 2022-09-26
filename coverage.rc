@@ -1,5 +1,5 @@
 [run]
-source = flask_restx
+source = my_restx
 branch = True
 omit =
     /tests/*

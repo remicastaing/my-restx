@@ -152,7 +152,7 @@ class Namespace(object):
         """
         Properly abort the current request
 
-        See: :func:`~flask_restx.errors.abort`
+        See: :func:`~my_restx.errors.abort`
         """
         abort(*args, **kwargs)
 

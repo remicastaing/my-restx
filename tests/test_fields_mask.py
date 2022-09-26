@@ -6,7 +6,7 @@ import pytest
 
 from collections import OrderedDict
 
-from flask_restx import mask, Api, Resource, fields, marshal, Mask
+from my_restx import mask, Api, Resource, fields, marshal, Mask
 
 
 def assert_data(tested, expected):

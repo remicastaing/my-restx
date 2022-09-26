@@ -10,7 +10,7 @@ from json import dumps, JSONEncoder
 from flask import Blueprint, redirect, views
 from werkzeug.exceptions import HTTPException, Unauthorized, BadRequest
 
-import flask_restx as restx
+import my_restx as restx
 
 
 # Add a dummy Resource to verify that the app is properly set.

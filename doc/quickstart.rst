@@ -3,7 +3,7 @@
 Quick start
 ===========
 
-.. currentmodule:: flask_restx
+.. currentmodule:: my_restx
 
 This guide assumes you have a working understanding of `Flask <https://flask.palletsprojects.com/>`_,
 and that you have already installed both Flask and my-restx.
@@ -25,7 +25,7 @@ This can be done using something like:
 
 .. code-block:: bash
 
-   find . -type f -name "*.py" | xargs sed -i "s/flask_restplus/flask_restx/g"
+   find . -type f -name "*.py" | xargs sed -i "s/flask_restplus/my_restx/g"
 
 Finally, you will need to update your configuration options (described `here
 <configuration.html>`_). Example:
@@ -43,7 +43,7 @@ As every other extension, you can initialize it with an application object:
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api
+    from my_restx import Api
 
     app = Flask(__name__)
     api = Api(app)
@@ -53,7 +53,7 @@ or lazily with the factory pattern:
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api
+    from my_restx import Api
 
     api = Api()
 
@@ -69,7 +69,7 @@ A minimal my-restx API looks like this:
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Resource, Api
+    from my_restx import Resource, Api
 
     app = Flask(__name__)
     api = Api(app)
@@ -121,7 +121,7 @@ A basic CRUD resource for a todo application (of course) looks like this:
 .. code-block:: python
 
     from flask import Flask, request
-    from flask_restx import Resource, Api
+    from my_restx import Resource, Api
 
     app = Flask(__name__)
     api = Api(app)
@@ -240,7 +240,7 @@ using a library similar to :mod:`python:argparse`.
 
 .. code-block:: python
 
-    from flask_restx import reqparse
+    from my_restx import reqparse
 
     parser = reqparse.RequestParser()
     parser.add_argument('rate', type=int, help='Rate to charge for this resource')
@@ -286,7 +286,7 @@ you use the ``fields`` module to describe the structure of your response.
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import fields, Api, Resource
+    from my_restx import fields, Api, Resource
 
     app = Flask(__name__)
     api = Api(app)

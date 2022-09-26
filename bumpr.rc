@@ -1,5 +1,5 @@
 [bumpr]
-file = flask_restx/__about__.py
+file = my_restx/__about__.py
 vcs = git
 commit = true
 tag = true

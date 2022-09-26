@@ -6,7 +6,7 @@ Here is a full example of a `TodoMVC <https://todomvc.com/>`_ API.
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api, Resource, fields
+    from my_restx import Api, Resource, fields
     from werkzeug.middleware.proxy_fix import ProxyFix
 
     app = Flask(__name__)

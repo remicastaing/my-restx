@@ -3,7 +3,7 @@
 Scaling your project
 ====================
 
-.. currentmodule:: flask_restx
+.. currentmodule:: my_restx
 
 This page covers building a slightly more complex my-restx app that will
 cover out some best practices when setting up a real-world my-restx-based API.
@@ -51,7 +51,7 @@ For example:
 
 .. code-block:: Python
 
-    from flask_restx import Namespace, Resource, fields
+    from my_restx import Namespace, Resource, fields
 
     api = Namespace('cats', description='Cats related operations')
 
@@ -90,7 +90,7 @@ The `apis.__init__` module should aggregate them:
 
 .. code-block:: Python
 
-    from flask_restx import Api
+    from my_restx import Api
 
     from .namespace1 import api as ns1
     from .namespace2 import api as ns2
@@ -115,7 +115,7 @@ You don't have to bind url-prefix while declaration of Namespace object.
 
 .. code-block:: Python
 
-    from flask_restx import Api
+    from my_restx import Api
 
     from .namespace1 import api as ns1
     from .namespace2 import api as ns2
@@ -157,7 +157,7 @@ Here's an example of how to link an :class:`Api` up to a :class:`~flask.Blueprin
 .. code-block:: python
 
     from flask import Blueprint
-    from flask_restx import Api
+    from my_restx import Api
 
     blueprint = Blueprint('api', __name__)
     api = Api(blueprint)
@@ -218,7 +218,7 @@ Each `apis/namespaceX` module will have the following pattern:
 
 .. code-block:: python
 
-    from flask_restx import Namespace, Resource
+    from my_restx import Namespace, Resource
 
     api = Namespace('mynamespace', 'Namespace Description' )
 
@@ -232,7 +232,7 @@ Each `apivX` module will have the following pattern:
 .. code-block:: python
 
     from flask import Blueprint
-    from flask_restx import Api
+    from my_restx import Api
 
     api = Api(blueprint)
 

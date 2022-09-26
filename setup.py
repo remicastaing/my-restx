@@ -65,7 +65,7 @@ long_description = "\n".join((rst("README.rst"), ""))
 
 
 exec(
-    compile(open("flask_restx/__about__.py").read(), "flask_restx/__about__.py", "exec")
+    compile(open("my_restx/__about__.py").read(), "my_restx/__about__.py", "exec")
 )
 
 install_requires = pip("install")

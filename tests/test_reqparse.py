@@ -10,9 +10,9 @@ from werkzeug.exceptions import BadRequest
 from werkzeug.wrappers import Request
 from werkzeug.datastructures import FileStorage, MultiDict
 
-from flask_restx import Api, Model, fields, inputs
-from flask_restx.errors import SpecsError
-from flask_restx.reqparse import Argument, RequestParser, ParseResult
+from my_restx import Api, Model, fields, inputs
+from my_restx.errors import SpecsError
+from my_restx.reqparse import Argument, RequestParser, ParseResult
 
 
 class ReqParseTest(object):
@@ -37,7 +37,7 @@ class ReqParseTest(object):
 
     def test_help(self, app, mocker):
         abort = mocker.patch(
-            "flask_restx.reqparse.abort", side_effect=BadRequest("Bad Request")
+            "my_restx.reqparse.abort", side_effect=BadRequest("Bad Request")
         )
         parser = RequestParser()
         parser.add_argument("foo", choices=("one", "two"), help="Bad choice.")
@@ -55,7 +55,7 @@ class ReqParseTest(object):
 
     def test_no_help(self, app, mocker):
         abort = mocker.patch(
-            "flask_restx.reqparse.abort", side_effect=BadRequest("Bad Request")
+            "my_restx.reqparse.abort", side_effect=BadRequest("Bad Request")
         )
         parser = RequestParser()
         parser.add_argument("foo", choices=["one", "two"])
@@ -809,7 +809,7 @@ class ArgumentTest(object):
         assert len(arg.operators) == 1
 
     def test_default_type(self, mocker):
-        mock_six = mocker.patch("flask_restx.reqparse.six")
+        mock_six = mocker.patch("my_restx.reqparse.six")
         arg = Argument("foo")
         sentinel = object()
         arg.type(sentinel)

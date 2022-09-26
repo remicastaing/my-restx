@@ -8,9 +8,9 @@ from textwrap import dedent
 from flask import url_for, Blueprint
 from werkzeug.datastructures import FileStorage
 
-import flask_restx as restx
+import my_restx as restx
 
-from flask_restx import inputs
+from my_restx import inputs
 
 
 class SwaggerTest(object):
@@ -3279,7 +3279,7 @@ class SwaggerDeprecatedTest(object):
         assert result["schema"]["properties"]["test2"]["type"] == "string"
 
     def test_expect_unused_model(self, app, api, client):
-        from flask_restx import fields
+        from my_restx import fields
 
         api.model(
             "SomeModel", {"param": fields.String, "count": fields.Integer,},
@@ -3306,7 +3306,7 @@ class SwaggerDeprecatedTest(object):
     def test_not_expect_unused_model(self, app, api, client):
         # This is the default configuration, RESTX_INCLUDE_ALL_MODELS=False
 
-        from flask_restx import fields
+        from my_restx import fields
 
         api.model(
             "SomeModel", {"param": fields.String, "count": fields.Integer,},

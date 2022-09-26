@@ -1,7 +1,7 @@
 import pytest
 
-from flask_restx import fields, Api, Resource
-from flask_restx.swagger import Swagger
+from my_restx import fields, Api, Resource
+from my_restx.swagger import Swagger
 
 api = Api()
 

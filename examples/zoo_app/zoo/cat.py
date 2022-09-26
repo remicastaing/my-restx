@@ -1,4 +1,4 @@
-from flask_restx import Namespace, Resource, fields
+from my_restx import Namespace, Resource, fields
 
 api = Namespace("cats", description="Cats related operations")
 

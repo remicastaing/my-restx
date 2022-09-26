@@ -3,7 +3,7 @@
 API
 ===
 
-.. currentmodule:: flask_restx
+.. currentmodule:: my_restx
 
 Core
 ----
@@ -24,18 +24,18 @@ Core
 Models
 ------
 
-.. autoclass:: flask_restx.Model
+.. autoclass:: my_restx.Model
     :members:
 
 All fields accept a ``required`` boolean and a ``description`` string in ``kwargs``.
 
-.. automodule:: flask_restx.fields
+.. automodule:: my_restx.fields
     :members:
 
 
 Serialization
 -------------
-.. currentmodule:: flask_restx
+.. currentmodule:: my_restx
 
 .. autofunction:: marshal
 
@@ -43,42 +43,42 @@ Serialization
 
 .. autofunction:: marshal_with_field
 
-.. autoclass:: flask_restx.mask.Mask
+.. autoclass:: my_restx.mask.Mask
     :members:
 
-.. autofunction:: flask_restx.mask.apply
+.. autofunction:: my_restx.mask.apply
 
 
 Request parsing
 ---------------
 
-.. automodule:: flask_restx.reqparse
+.. automodule:: my_restx.reqparse
     :members:
 
 Inputs
 ~~~~~~
 
-.. automodule:: flask_restx.inputs
+.. automodule:: my_restx.inputs
     :members:
 
 
 Errors
 ------
 
-.. automodule:: flask_restx.errors
+.. automodule:: my_restx.errors
     :members:
 
-.. autoexception:: flask_restx.fields.MarshallingError
+.. autoexception:: my_restx.fields.MarshallingError
 
-.. autoexception:: flask_restx.mask.MaskError
+.. autoexception:: my_restx.mask.MaskError
 
-.. autoexception:: flask_restx.mask.ParseError
+.. autoexception:: my_restx.mask.ParseError
 
 
 Schemas
 -------
 
-.. automodule:: flask_restx.schemas
+.. automodule:: my_restx.schemas
     :members:
 
 
@@ -88,11 +88,11 @@ Internals
 These are internal classes or helpers.
 Most of the time you shouldn't have to deal directly with them.
 
-.. autoclass:: flask_restx.api.SwaggerView
+.. autoclass:: my_restx.api.SwaggerView
 
-.. autoclass:: flask_restx.swagger.Swagger
+.. autoclass:: my_restx.swagger.Swagger
 
-.. autoclass:: flask_restx.postman.PostmanCollectionV1
+.. autoclass:: my_restx.postman.PostmanCollectionV1
 
-.. automodule:: flask_restx.utils
+.. automodule:: my_restx.utils
     :members:

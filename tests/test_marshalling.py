@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 import pytest
 
-from flask_restx import marshal, marshal_with, marshal_with_field, fields, Api, Resource
+from my_restx import marshal, marshal_with, marshal_with_field, fields, Api, Resource
 
 from collections import OrderedDict
 

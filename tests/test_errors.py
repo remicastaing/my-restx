@@ -12,7 +12,7 @@ from flask.signals import got_request_exception
 from werkzeug.exceptions import HTTPException, BadRequest, NotFound, Aborter
 from werkzeug.http import quote_etag, unquote_etag
 
-import flask_restx as restx
+import my_restx as restx
 
 
 class ErrorsTest(object):

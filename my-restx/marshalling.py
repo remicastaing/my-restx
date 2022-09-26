@@ -32,7 +32,7 @@ def marshal(data, fields, envelope=None, skip_none=False, mask=None, ordered=Fal
     :param bool ordered: Wether or not to preserve order
 
 
-    >>> from flask_restx import fields, marshal
+    >>> from my_restx import fields, marshal
     >>> data = { 'a': 100, 'b': 'foo', 'c': None }
     >>> mfields = { 'a': fields.Raw, 'c': fields.Raw, 'd': fields.Raw }
 
@@ -128,7 +128,7 @@ def _marshal(data, fields, envelope=None, skip_none=False, mask=None, ordered=Fa
     :param bool ordered: Wether or not to preserve order
 
 
-    >>> from flask_restx import fields, marshal
+    >>> from my_restx import fields, marshal
     >>> data = { 'a': 100, 'b': 'foo', 'c': None }
     >>> mfields = { 'a': fields.Raw, 'c': fields.Raw, 'd': fields.Raw }
 
@@ -197,7 +197,7 @@ def _marshal(data, fields, envelope=None, skip_none=False, mask=None, ordered=Fa
 class marshal_with(object):
     """A decorator that apply marshalling to the return values of your methods.
 
-    >>> from flask_restx import fields, marshal_with
+    >>> from my_restx import fields, marshal_with
     >>> mfields = { 'a': fields.Raw }
     >>> @marshal_with(mfields)
     ... def get():
@@ -224,7 +224,7 @@ class marshal_with(object):
     >>> get()
     OrderedDict([('a', 100)])
 
-    see :meth:`flask_restx.marshal`
+    see :meth:`my_restx.marshal`
     """
 
     def __init__(
@@ -276,7 +276,7 @@ class marshal_with_field(object):
     """
     A decorator that formats the return values of your methods with a single field.
 
-    >>> from flask_restx import marshal_with_field, fields
+    >>> from my_restx import marshal_with_field, fields
     >>> @marshal_with_field(fields.List(fields.Integer))
     ... def get():
     ...     return ['1', 2, 3.0]
@@ -284,7 +284,7 @@ class marshal_with_field(object):
     >>> get()
     [1, 2, 3]
 
-    see :meth:`flask_restx.marshal_with`
+    see :meth:`my_restx.marshal_with`
     """
 
     def __init__(self, field):

@@ -8,7 +8,7 @@ from os.path import join, dirname
 from jsonschema import validate
 from werkzeug.datastructures import FileStorage
 
-import flask_restx as restx
+import my_restx as restx
 
 from six.moves.urllib.parse import parse_qs, urlparse
 

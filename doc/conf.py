@@ -59,7 +59,7 @@ copyright = u"2020, remicastaing Authors"
 # built documents.
 #
 # The full version, including alpha/beta/rc tags.
-release = __import__("flask_restx").__version__
+release = __import__("my_restx").__version__
 # The short X.Y version.
 version = ".".join(release.split(".")[:1])
 

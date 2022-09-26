@@ -1,4 +1,4 @@
-from flask_restx import Api
+from my_restx import Api
 
 from .cat import api as cat_api
 from .dog import api as dog_api

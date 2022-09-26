@@ -18,7 +18,7 @@ except ImportError:
     from collections import Mapping
 from jsonschema import Draft4Validator
 
-from flask_restx import errors
+from my_restx import errors
 
 
 class SchemaValidationError(errors.ValidationError):
@@ -103,7 +103,7 @@ def validate(data):
     :param data dict: The specification to validate
     :returns boolean: True if the specification is valid
     :raises SchemaValidationError: when the specification is invalid
-    :raises flask_restx.errors.SpecsError: when it's not possible to determinate
+    :raises my_restx.errors.SpecsError: when it's not possible to determinate
                                               the schema to validate against
 
     .. versionadded:: 0.12.1

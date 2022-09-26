@@ -13,7 +13,7 @@ By default, these loggers inherit configuration from the Flask application objec
 
     import flask
 
-    from flask_restx import Api, Resource
+    from my_restx import Api, Resource
 
     # configure root logger
     logging.basicConfig(level=logging.INFO)

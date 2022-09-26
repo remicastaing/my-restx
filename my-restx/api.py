@@ -856,7 +856,7 @@ class Api(object):
         """
         Synchronize prefix between blueprint/api and registration options, then
         perform initialization with setup_state.app :class:`flask.Flask` object.
-        When a :class:`flask_restx.Api` object is initialized with a blueprint,
+        When a :class:`my_restx.Api` object is initialized with a blueprint,
         this method is recorded on the blueprint to be run when the blueprint is later
         registered to a :class:`flask.Flask` object.  This method also monkeypatches
         BlueprintSetupState.add_url_rule with _blueprint_setup_add_url_rule_patch.

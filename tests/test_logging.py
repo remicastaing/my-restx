@@ -1,6 +1,6 @@
 import logging
 
-import flask_restx as restx
+import my_restx as restx
 
 
 class LoggingTest(object):

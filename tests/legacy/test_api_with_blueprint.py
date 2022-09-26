@@ -5,7 +5,7 @@ import flask
 
 from flask import Blueprint, request
 
-import flask_restx as restx
+import my_restx as restx
 
 
 # Add a dummy Resource to verify that the app is properly set.

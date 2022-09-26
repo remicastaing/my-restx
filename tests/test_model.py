@@ -6,7 +6,7 @@ import pytest
 
 from collections import OrderedDict
 
-from flask_restx import fields, Model, OrderedModel, SchemaModel
+from my_restx import fields, Model, OrderedModel, SchemaModel
 
 
 class ModelTest(object):

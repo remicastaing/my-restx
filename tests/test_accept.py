@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-import flask_restx as restx
+import my_restx as restx
 
 
 class Foo(restx.Resource):

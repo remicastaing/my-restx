@@ -1,7 +1,7 @@
 Error handling
 ==============
 
-.. currentmodule:: flask_restx
+.. currentmodule:: my_restx
 
 HTTPException handling
 ----------------------
@@ -100,7 +100,7 @@ but it will also add the keyword arguments to the response.
 
 .. code-block:: python
 
-    from flask_restx import abort
+    from my_restx import abort
     abort(400, custom='value')
 
 will return a 400 HTTP code and output

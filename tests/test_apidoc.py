@@ -6,7 +6,7 @@ import pytest
 from flask import url_for, Blueprint
 from werkzeug.routing import BuildError
 
-import flask_restx as restx
+import my_restx as restx
 
 
 class APIDocTest(object):

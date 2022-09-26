@@ -90,7 +90,7 @@ With my-restx, you only import the api instance to route and document your endpo
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api, Resource, fields
+    from my_restx import Api, Resource, fields
 
     app = Flask(__name__)
     api = Api(app, version='1.0', title='TodoMVC API',

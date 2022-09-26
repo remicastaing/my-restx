@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 import pytest
 
-from flask_restx import utils
+from my_restx import utils
 
 
 class MergeTestCase(object):

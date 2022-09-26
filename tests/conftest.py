@@ -7,7 +7,7 @@ import pytest
 from flask import Flask, Blueprint
 from flask.testing import FlaskClient
 
-import flask_restx as restx
+import my_restx as restx
 
 
 class TestClient(FlaskClient):

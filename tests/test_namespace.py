@@ -2,9 +2,9 @@
 from __future__ import unicode_literals
 import re
 
-import flask_restx as restx
+import my_restx as restx
 
-from flask_restx import Namespace, Model, OrderedModel
+from my_restx import Namespace, Model, OrderedModel
 
 
 class NamespaceTest(object):

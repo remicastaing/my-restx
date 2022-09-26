@@ -5,7 +5,7 @@ import copy
 
 from flask import url_for, Blueprint
 
-import flask_restx as restx
+import my_restx as restx
 
 
 class APITest(object):

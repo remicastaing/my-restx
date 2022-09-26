@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 
-from flask_restx import Resource, Namespace
+from my_restx import Resource, Namespace
 from flask import Blueprint, Flask
-from flask_restx import Api, fields, Model
+from my_restx import Api, fields, Model
 
 ### models.py contain models for data validation ###
 # just a simple model

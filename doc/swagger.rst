@@ -4,7 +4,7 @@ Swagger documentation
 =====================
 
 
-.. currentmodule:: flask_restx
+.. currentmodule:: my_restx
 
 Swagger API documentation is automatically generated and available from your API's root URL.  You can configure the documentation using the :meth:`@api.doc() <Api.doc>` decorator.
 
@@ -174,7 +174,7 @@ You can specify lists as the expected input:
             pass
 
 
-You can use :exc:`~flask_restx.reqparse.RequestParser` to define the expected input:
+You can use :exc:`~my_restx.reqparse.RequestParser` to define the expected input:
 
 .. code-block:: python
 
@@ -560,9 +560,9 @@ For ``POST`` and ``PUT`` methods, use the ``body`` keyword argument to specify t
             return {}
 
 
-If both ``body`` and ``formData`` parameters are used, a :exc:`~flask_restx.errors.SpecsError` will be raised.
+If both ``body`` and ``formData`` parameters are used, a :exc:`~my_restx.errors.SpecsError` will be raised.
 
-Models can also be specified with a :class:`~flask_restx.reqparse.RequestParser`.
+Models can also be specified with a :class:`~my_restx.reqparse.RequestParser`.
 
 .. code-block:: python
 
@@ -589,7 +589,7 @@ Models can also be specified with a :class:`~flask_restx.reqparse.RequestParser`
 
 .. note::
 
-    Using :class:`~flask_restx.reqparse.RequestParser` is preferred over the ``api.param()`` decorator
+    Using :class:`~my_restx.reqparse.RequestParser` is preferred over the ``api.param()`` decorator
     to document form fields as it also perform validation.
 
 Headers
@@ -892,7 +892,7 @@ By default ``my-restx`` provides Swagger UI documentation, served from the root 
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api, Resource, fields
+    from my_restx import Api, Resource, fields
 
     app = Flask(__name__)
     api = Api(app, version='1.0', title='Sample API',
@@ -928,7 +928,7 @@ You can control the Swagger UI path with the ``doc`` parameter (defaults to the 
 .. code-block:: python
 
     from flask import Flask, Blueprint
-    from flask_restx import Api
+    from my_restx import Api
 
     app = Flask(__name__)
     blueprint = Blueprint('api', __name__, url_prefix='/api')
@@ -944,7 +944,7 @@ You can specify a custom validator URL by setting ``config.SWAGGER_VALIDATOR_URL
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api
+    from my_restx import Api
 
     app = Flask(__name__)
     app.config.SWAGGER_VALIDATOR_URL = 'http://domain.com/validator'
@@ -963,7 +963,7 @@ These values are all public knowledge. No *client secret* is specified here.
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api
+    from my_restx import Api
     
     app = Flask(__name__)
 
@@ -995,7 +995,7 @@ setting (``'none'``, ``'list'`` or ``'full'``):
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api
+    from my_restx import Api
 
     app = Flask(__name__)
     app.config.SWAGGER_UI_DOC_EXPANSION = 'list'
@@ -1007,7 +1007,7 @@ By default, operation ID is hidden as well as request duration, you can enable t
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api
+    from my_restx import Api
 
     app = Flask(__name__)
     app.config.SWAGGER_UI_OPERATION_ID = True
@@ -1022,7 +1022,7 @@ you can register a custom view function with the :meth:`~Api.documentation` deco
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api, apidoc
+    from my_restx import Api, apidoc
 
     app = Flask(__name__)
     api = Api(app)
@@ -1041,7 +1041,7 @@ supporting the same values as the ``supportedSubmitMethods`` `Swagger UI paramet
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api
+    from my_restx import Api
 
     app = Flask(__name__)
 
@@ -1061,7 +1061,7 @@ To disable Swagger UI entirely, set ``doc=False``:
 .. code-block:: python
 
     from flask import Flask
-    from flask_restx import Api
+    from my_restx import Api
 
     app = Flask(__name__)
     api = Api(app, doc=False)

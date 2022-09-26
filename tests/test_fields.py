@@ -10,7 +10,7 @@ import pytz
 import pytest
 
 from flask import Blueprint
-from flask_restx import fields, Api
+from my_restx import fields, Api
 
 
 class FieldTestCase(object):
